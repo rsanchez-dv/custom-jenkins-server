@@ -1,0 +1,22 @@
+parameters:
+  - string:
+    name: GIT_BRANCH
+    default: 'master'
+
+pipeline:
+  environment:
+    BRANCH: "${params.GIT_BRANCH}"
+  stages:
+    - stage: build
+      steps:
+        - script:
+          echo "Building the project..."
+    - stage: test
+      steps:
+        - script: 
+          echo "Running Tests..."
+    - stage: deploy
+      steps:
+        - script:
+          echo "Deploying the project to production..."
+
