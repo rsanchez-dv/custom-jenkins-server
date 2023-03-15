@@ -1,0 +1,7 @@
+jenkins:
+  securityRealm:
+    local:
+      allowSignup: false
+      users:
+        - id: ${JENKINGS_ADMIN_ID}
+          password: ${JENKINGS_ADMIN_PASSWORD}
